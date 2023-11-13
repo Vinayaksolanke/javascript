@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    body{
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        /* height: 100vh; */
+        position:relative;
+        padding: 0;
+    }
+</style>
+<body style="background-color:black; color:white">
+    <h1><span id = "h1">Event is created</span></h1>
+    <button id="stop">Stop Event</button>
+    <p id="para"></p>
+</body>
+<script>
+ const h1 = document.getElementById('h1')
+ const stopped = document.getElementById('stop')
+ const para = document.getElementById('para')
+function event(){
+   
+     h1.innerText ='Event is changed'
+     h1.style.backgroundColor="orange" 
+}
+const stop = setTimeout(event, 2000);
+
+stopped.addEventListener('click',function(){
+        clearTimeout(stop)
+        para.innerText = 'STOPPED'
+    })
+   
+    
+
+
+
+
+
+</script>
+</html>

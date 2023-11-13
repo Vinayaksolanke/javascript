@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <p>hii</p>
+</body>
+<script>
+const start = document.getElementById("start")
+const stoop = document.getElementById("stop")
+const p = document.querySelector('p')
+// let stopped
+// console.log(stop);
+let Stopped
+
+const SayDate = function(str) {
+    console.log(str,Date.now())
+    
+}
+const Displaydate = function(){
+     function continues(){
+        SayDate()
+     }
+Stopped =setInterval(continues,1000)
+}
+const stoopydate = function(){
+    clearInterval(Stopped)
+
+}
+start.addEventListener("click", Displaydate)
+stoop.addEventListener("click", stoopydate)
+
+    </script>
+</html>
